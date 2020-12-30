@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parser test</title>
+</head>
+<body>
+{% if bk_length == 0 %}
+    <a href="{% url 'main:bk_parser' %}">
+        <button>Get BK data</button>
+    </a>
+{% else %}
+    <p>У Burger King всего {{ bk_length }} ресторана.</p>
+{% endif %}
+{% if mcd_length == 0 %}
+    <a href="{% url 'main:mcd_parser' %}">
+        <button>Get McD data</button>
+    </a>
+{% else %}
+    <p>У McDonalds всего {{ mcd_length }} ресторанов.</p>
+{% endif %}
+{% if kfc_length == 0 %}
+    <a href="{% url 'main:kfc_parser' %}">
+        <button>Get KFC data</button>
+    </a>
+{% else %}
+    <p>У KFC всего {{ kfc_length }} ресторана.</p>
+{% endif %}
+{% if not result %}
+    <a href="{% url 'main:pandas' %}">
+        <button>Process to pandas</button>
+    </a>
+{% else %}
+    <p>{{ result }}</p>
+{% endif %}
+{% if not report %}
+    <a href="{% url 'main:moscow_report' %}">
+        <button>Get info on Moscow</button>
+    </a>
+{% else %}
+    <p>{{ report }}</p>
+{% endif %}
+</body>
+</html>
