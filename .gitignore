@@ -1,0 +1,17 @@
+/venv/*
+/.idea/
+/.idea/*
+/webinars/
+/webinars/*
+vk_credentials.json
+google_credentials.json
+db.sqlite3
+/tmp/email-messages/
+/tmp/email-messages/*
+/geekshop/bin/
+/geekshop/bin/*
+/geekshop/lib/
+/geekshop/lib/*
+pyvenv.cfg
+geekshop_visualized.png
+urls.txt
